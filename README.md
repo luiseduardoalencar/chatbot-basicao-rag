@@ -29,7 +29,7 @@ Este é um aplicativo Streamlit que permite que você converse com seus arquivos
 2. **Instale o Poetry (se ainda não o tiver):**
 
    ```bash
-   curl -sSL https://install.python-poetry.org | python3 -
+   pipx install poetry
    ```
 
    Certifique-se de que o caminho do Poetry está no seu `PATH`. Reinicie o terminal ou siga as instruções exibidas após a instalação.
@@ -61,7 +61,7 @@ Este é um aplicativo Streamlit que permite que você converse com seus arquivos
 1. **Execute o aplicativo Streamlit:**
 
    ```bash
-   streamlit run app.py
+   poetry -vvv streamlit run app.py
    ```
 
 2. **Interaja com o ChatBot:**
@@ -121,18 +121,6 @@ streamlit-chat = "^0.1.1"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 ```
-
-## Notas Importantes
-
-- **Segurança**: Certifique-se de que sua chave de API da OpenAI é mantida em segredo e não a compartilhe publicamente.
-- **Limite de Tokens**: O aplicativo possui um limite de tokens (por exemplo, 16.000 tokens) para evitar sobrecarregar o modelo e controlar os custos de uso da API.
-- **Contagem de Tokens**: A contagem de tokens é baseada no comprimento do texto. Para uma contagem mais precisa, o aplicativo utiliza a biblioteca `tiktoken`.
-- **Tratamento de Erros**: Erros são tratados e exibidos de forma amigável ao usuário, sem expor detalhes técnicos.
-- **Ambiente Virtual**: O Poetry gerencia automaticamente o ambiente virtual. Se preferir que o ambiente virtual seja criado dentro do diretório do projeto, execute:
-
-  ```bash
-  poetry config virtualenvs.in-project true
-  ```
 
 ## Contribuição
 
