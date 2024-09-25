@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "chatbot-ged"
+version = "0.1.0"
+description = "Chat PDF Geração Empreendedor Disciplinado"
+authors = ["Luis Eduardo <luiseduardoalencarmelo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.38.0"
+python-dotenv = "^1.0.1"
+langchain = "^0.0.308"
+langchain-community = "^0.0.7"
+openai = "^0.28.1"
+pypdf2 = "^3.0.1"
+faiss-cpu = "^1.8.0.post1"
+tiktoken = "^0.7.0"
+streamlit-chat = "^0.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
